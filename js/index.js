@@ -59,6 +59,14 @@ about.textContent = siteContent.nav["nav-item-5"];
 let contact = document.querySelector('nav a:nth-child(6)');
 contact.textContent = siteContent.nav["nav-item-6"];
 
+let textnode = document.createTextNode("Testimonials");
+let textNode2 = document.createTextNode("Bored?");
+
+let navBar = document.querySelector("nav").appendChild(textnode);
+let navbar2 = document.querySelector("nav").prepend(textNode2);
+
+let multipleA = document.querySelectorAll("a");
+multipleA.forEach(element => {element.style.color = "green";});
 
 //CTA SECTION
 let ctaHeader = document.querySelector('.cta-text h1');
@@ -71,8 +79,8 @@ let ctaImg = document.getElementById('cta-img');
 ctaImg.setAttribute('src', siteContent.cta["img-src"]);
 
 //MAIN CONTENT
-let featureH4 = document.querySelector(".top-content .text-content:first-child h4");
-featureH4.textContent = siteContent["main-content"]["features-h4"];
+let featureH4 = document.querySelector(".top-content .text-content:first-child h4").textContent = siteContent["main-content"]["features-h4"];
+
 
 let featureCont = document.querySelector(".top-content .text-content:first-child p").textContent = siteContent["main-content"]["features-content"];
 
